@@ -30,15 +30,15 @@ def isWinner(x, nums):
     """
     if x is None or nums is None or x == 0 or nums == []:
         return None
-    Maria = Ben = 0
+    Ben = Maria = 0
     for i in range(x):
         prime = primes(nums[i])
         if len(prime) % 2 == 0:
             Maria += 1
         else:
             Ben += 1
-        if Maria > Ben:
-            return 'Maria'
         if Ben > Maria:
             return 'Ben'
+        if Maria > Ben:
+            return 'Maria'
         return None
