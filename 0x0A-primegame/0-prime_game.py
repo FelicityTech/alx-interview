@@ -34,9 +34,9 @@ def isWinner(x, nums):
     for i in range(x):
         prime = primes(nums[i])
         if len(prime) % 2 == 0:
-            Ben += 1
-        else:
             Maria += 1
+        else:
+            Ben += 1
         if Maria > Ben:
             return 'Maria'
         if Ben > Maria:
